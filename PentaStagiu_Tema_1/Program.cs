@@ -27,12 +27,13 @@ namespace PentaStagiu
             }
             if (attempts > 1)
             {
-                Console.WriteLine("Felicitari! Ai ghicit numarul din {0} incercari", attempts);
+                Console.WriteLine("Felicitari! Ai ghicit numarul din {0} incercari.", attempts);
             }
             else
             {
                 Console.WriteLine("Felicitari! Ai ghicit numarul din prima.");
             }
+            Console.ReadLine();
         }
 
         static int GenerateRandomNr()
