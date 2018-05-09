@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PentaStagiu_Tema_1", "PentaStagiu_Tema_1\PentaStagiu_Tema_1.csproj", "{512BE8A2-9D00-4132-A817-2314F0097104}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework01", "PentaStagiu_Tema_1\Homework01.csproj", "{512BE8A2-9D00-4132-A817-2314F0097104}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

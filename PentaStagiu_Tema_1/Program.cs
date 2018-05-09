@@ -10,28 +10,25 @@ namespace PentaStagiu
     {
         static void Main(string[] args)
         {
-            int attempts = 0;
             int guessNr = GenerateRandomNr();
             int userNr = GetNrFromUser();
-
-            if (userNr == 24011989)
-            {
-                Console.WriteLine(guessNr);
-            }
+            int guessAttempts = 0;
+            
             while (userNr != guessNr)
             {
-                attempts++;
                 string diff = (userNr < guessNr ? "mic" : "mare");
                 Console.WriteLine("Numarul introdus este mai {0}. Incearca din nou!", diff);
+                guessAttempts++;
                 userNr = GetNrFromUser();
             }
-            if (attempts > 1)
+
+            if (guessAttempts > 1)
             {
-                Console.WriteLine("Felicitari! Ai ghicit numarul din {0} incercari.", attempts);
+                Console.WriteLine("Felicitari! Ai ghicit numarul din {0} incercari.", guessAttempts);
             }
             else
             {
-                Console.WriteLine("Felicitari! Ai ghicit numarul din prima.");
+                Console.WriteLine("Felicitari! Ai ghicit numarul din prima incercare.");
             }
             Console.ReadLine();
         }
@@ -47,12 +44,9 @@ namespace PentaStagiu
             Console.WriteLine("Introdu un numar intre 0 si 100");
             int userInput = -1;
             bool isNr = int.TryParse(Console.ReadLine(), out userInput);
-            if(userInput != 24011989)
+            if (!isNr || userInput < 0 || userInput > 100)
             {
-                if (!isNr || userInput < 0 || userInput > 100)
-                {
-                    GetNrFromUser();
-                }
+                GetNrFromUser();
             }
             return userInput;
         }
